@@ -1,0 +1,120 @@
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width:100%;
+    box-sizing: border-box;
+  }
+
+  .heading{
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: orange;
+  }
+  
+  .search-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+  }
+  
+.headone{
+    background-color: orange;
+}
+
+.loader {
+    margin-left: 10px;
+    border: 4px solid #f3f3f3; /* Light grey */
+    border-top: 4px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .city-input {
+    padding: 10px;
+    flex: 1;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  
+  .search-button {
+    padding: 10px;
+    margin-left: 10px;
+    background-color: orange;
+    box-sizing: border-box;
+  }
+  
+  .forecast-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .forecast-table {
+    width: 100%;
+    max-width: 200px;
+    border-collapse: collapse;
+    margin: 10px;
+    box-sizing: border-box;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  @media (max-width: 600px) {
+    .search-container {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .city-input, .search-button ,.loader {
+      margin: 0;
+      margin-bottom: 10px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  
+    .forecast-container {
+    
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .forecast-table {
+      width: 100%;
+      margin: 10px 0;
+      box-sizing: border-box;
+    }
+
+    .loader {
+        margin-left: 0;
+        width:30px;
+        height:30px;
+    }
+
+  }
